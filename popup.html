@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        width: 260px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 16px;
+        margin: 0;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333;
+      }
+      input {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      input::placeholder {
+        color: #888;
+        font-style: italic;
+      }
+      button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #007ACC;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease;
+      }
+      button:hover {
+        background-color: #005A9E;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #007ACC;
+        text-align: center;
+      }
+    </style>
+    <title>OU ID Autofill</title>
+  </head>
+  <body>
+    <label for="studentId">Student ID</label>
+    <input id="studentId" type="text" placeholder="123456789" autocomplete="off" />
+    <button id="saveBtn">Save ID</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
