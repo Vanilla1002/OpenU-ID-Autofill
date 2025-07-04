@@ -41,9 +41,13 @@
         cursor: pointer;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         transition: background-color 0.2s ease;
+        margin-bottom: 8px;
       }
       button:hover {
         background-color: #005A9E;
+      }
+      .hidden {
+        display: none;
       }
       #status {
         margin-top: 10px;
@@ -52,12 +56,43 @@
         text-align: center;
       }
     </style>
-    <title>OU ID Autofill</title>
+    <title>OU Autofill</title>
   </head>
   <body>
-    <label for="studentId">Student ID</label>
-    <input id="studentId" type="text" placeholder="123456789" autocomplete="off" />
-    <button id="saveBtn">Save ID</button>
+    <!-- Student ID Form -->
+    <div id="idForm">
+      <label for="studentId">Student ID</label>
+      <input
+        id="studentId"
+        type="text"
+        placeholder="123456789"
+        autocomplete="off"
+      />
+      <button id="saveIdBtn">Save ID</button>
+    </div>
+
+    <!-- Account/Password Form -->
+    <div id="credForm" class="hidden">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        placeholder="username"
+        autocomplete="off"
+      />
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="password"
+        autocomplete="off"
+      />
+      <button id="saveCredsBtn">Save Credentials</button>
+    </div>
+
+    <!-- Single Flip button -->
+    <button id="flipBtn">Use Account/Password</button>
+
     <div id="status"></div>
     <script src="popup.js"></script>
   </body>
