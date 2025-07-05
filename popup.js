@@ -7,7 +7,7 @@ const statusEl = document.getElementById("status");
 
 function showStatus(msg) {
   statusEl.textContent = msg;
-  setTimeout(() => window.close(), 2000);
+  
 }
 
 function toggleView() {
