@@ -6,7 +6,7 @@
     <style>
       body {
         width: 260px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         padding: 16px;
         margin: 0;
       }
@@ -35,7 +35,7 @@
         font-size: 15px;
         font-weight: 600;
         color: #fff;
-        background-color: #007ACC;
+        background-color: #007acc;
         border: none;
         border-radius: 6px;
         cursor: pointer;
@@ -44,7 +44,24 @@
         margin-bottom: 8px;
       }
       button:hover {
-        background-color: #005A9E;
+        background-color: #005a9e;
+      }
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+      button.danger {
+        background-color: #cc3b3b;
+      }
+      button.danger:hover {
+        background-color: #a82c2c;
+      }
+      button.danger:disabled {
+        background-color: #ccc !important;
+        color: #666;
+        cursor: not-allowed;
+        box-shadow: none;
       }
       .hidden {
         display: none;
@@ -52,7 +69,7 @@
       #status {
         margin-top: 10px;
         font-size: 13px;
-        color: #007ACC;
+        color: #007acc;
         text-align: center;
       }
     </style>
@@ -69,6 +86,7 @@
         autocomplete="off"
       />
       <button id="saveIdBtn">Save ID</button>
+      <button id="deleteIdBtn" class="danger" disabled>Delete ID</button>
     </div>
 
     <!-- Account/Password Form -->
@@ -88,9 +106,12 @@
         autocomplete="off"
       />
       <button id="saveCredsBtn">Save Credentials</button>
+      <button id="deleteCredsBtn" class="danger" disabled>
+        Delete Credentials
+      </button>
     </div>
 
-    <!-- Single Flip button -->
+    <!-- Flip button -->
     <button id="flipBtn">Use Account/Password</button>
 
     <div id="status"></div>
