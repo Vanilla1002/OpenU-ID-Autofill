@@ -7,6 +7,9 @@
 
 
 ## התקנה
+https://chromewebstore.google.com/detail/oclilaenokembfjjmgkjagpbelhhneib?utm_source=item-share-cb
+
+## למפתחים
 ``` git clone https://github.com/Vanilla1002/OpenU-ID-Autofill.git```
 
 להיכנס לתוספים בדפדפן, לפתוח dev mode ולהוסיף את התיקייה של הפרוייקט
